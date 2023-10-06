@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LOGIN</title>
+	<style type="text/css">
+		.MDIV
+		{
+			height: 100VH;
+			width: 100%;
+			background-image: URL(https://wallpaperaccess.com/full/4893749.jpg);
+			background-repeat: no-repeat;
+			background-size: COVER;
+			position: fixed;
+			top: 0PX;
+			left: 0PX;
+		}
+		.LGNFRM
+		{
+			width: 200PX;
+			height: 200PX;
+			margin: 10% 40%;
+		}
+		input
+		{
+			width: 95%;
+			margin-top: 10PX;
+			height: 20PX;
+			background-color: TRANSPERENT;
+			border: none;
+			border-bottom: 2PX SOLID lightyellow;
+			color: black;
+		}
+
+
+		input:FOCUS
+		{
+			outline: none;
+		}
+		.HEAD
+		{
+			color: darkred;
+			letter-spacing: 4PX;
+			font-size: 20PX;
+			font-family: ELEPHANT;
+			font-weight: BOLDER;
+			transition-duration: 1s;
+		}
+		INPUT[TYPE="BUTTON"]
+		{
+			border: NONE;
+			background-color:limegreen;
+			height: 30PX;
+			color: black;
+			font-size: 15PX;
+			border-radius: 10PX;
+			margin-bottom: 10PX;
+			transition-duration: 1S;
+		}
+		input[TYPE="BUTTON"]:HOVER
+		{
+			background-color: transparent;
+			color: darkcyan;
+			border: 2PX solid white;
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="MDIV">
+		<div class="LGNFRM" align="center">
+			<fieldset><form autocomplete="OFF">
+				<h2 class="HEAD"><marquee behavior="alternate">LOGIN</marquee></h2>
+				<input type="text" name="USERNAME" placeholder="username" class="ip1" id="usr">
+				<input type="passoword" name="pwd" placeholder="passoword" style="margin-bottom: 10px;" class="ip1" id="pass">
+				<span><a href="#">forget passoword ?</a></span>
+				<input type="button" name="LGN" value="LOGIN" onclick="validate()" >
+				<span><a href="#">create account</a></span>
+			</form></fieldset>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let usr1 ="arpan";
+		let pass1="arpan123";
+		function validate() {
+			let usr2=document.getElementById("usr").value;
+			let pass2=document.getElementById("pass").value;
+			
+			if ((usr1 === usr2)&&(pass1 === pass2)) {
+				open('homepage.html');
+			}
+			else{
+				alert("wrong password");
+			}
+			
+		}
+	</script>
+
+</body>
+</html>
